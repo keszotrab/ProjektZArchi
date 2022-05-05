@@ -42,14 +42,24 @@ namespace WindowsFormsApp1
             this.label5 = new System.Windows.Forms.Label();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // checkedListBox2
             // 
+            this.checkedListBox2.AllowDrop = true;
+            this.checkedListBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.checkedListBox2.CheckOnClick = true;
             this.checkedListBox2.FormattingEnabled = true;
             this.checkedListBox2.Items.AddRange(new object[] {
-            "MOV"});
+            "MOV",
+            "XCHG",
+            "ADD"});
             this.checkedListBox2.Location = new System.Drawing.Point(380, 344);
             this.checkedListBox2.Name = "checkedListBox2";
             this.checkedListBox2.Size = new System.Drawing.Size(58, 64);
@@ -58,7 +68,7 @@ namespace WindowsFormsApp1
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(594, 344);
+            this.button9.Location = new System.Drawing.Point(590, 344);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 23);
             this.button9.TabIndex = 2;
@@ -140,7 +150,7 @@ namespace WindowsFormsApp1
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(135, 32);
+            this.label5.Location = new System.Drawing.Point(195, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 4;
@@ -163,29 +173,80 @@ namespace WindowsFormsApp1
             this.textBox18.TabIndex = 3;
             this.textBox18.Text = "BX";
             // 
-            // button5
+            // textBox13
             // 
-            this.button5.Location = new System.Drawing.Point(594, 386);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.textBox13.Location = new System.Drawing.Point(234, 58);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(100, 20);
+            this.textBox13.TabIndex = 3;
+            this.textBox13.Text = "1";
+            this.textBox13.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(234, 87);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(100, 20);
+            this.textBox14.TabIndex = 3;
+            this.textBox14.Text = "2";
+            this.textBox14.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(234, 115);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(100, 20);
+            this.textBox15.TabIndex = 3;
+            this.textBox15.Text = "3";
+            this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(234, 141);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(100, 20);
+            this.textBox16.TabIndex = 3;
+            this.textBox16.Text = "4";
+            this.textBox16.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(149, 32);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(15, 13);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "H";
+            this.label6.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(277, 32);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(13, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "L";
+            this.label7.Click += new System.EventHandler(this.label5_Click);
             // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(727, 461);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox18);
             this.Controls.Add(this.textBox17);
+            this.Controls.Add(this.textBox16);
+            this.Controls.Add(this.textBox15);
             this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.textBox14);
             this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.textBox13);
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.button9);
@@ -225,7 +286,12 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
 

@@ -13,6 +13,39 @@ namespace WindowsFormsApp1
         private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+
+
+
+
+
+
+
+
+
+
+            int iDontKnowAndIDontCare = 0;
+            var b = checkedListBox2.CheckedItems;
+            foreach (var item in b)
+            {
+                Console.WriteLine("tragedia");
+
+                if (iDontKnowAndIDontCare > 0)
+                {
+
+                    iDontKnowAndIDontCare = 0;
+                    foreach (int i in checkedListBox2.CheckedIndices)
+                    {
+                        checkedListBox2.SetItemCheckState(i, CheckState.Unchecked);
+                    }
+                    break;
+
+                }
+                iDontKnowAndIDontCare++;
+
+            }
+
+            //checkedListBox2.ClearSelected();
+            //iDontKnowAndIDontCare = 0;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -31,6 +64,9 @@ namespace WindowsFormsApp1
 
         private void button9_Click(object sender, EventArgs e)
         {
+
+
+            
             if (checkedListBox2.CheckedItems.Contains("MOV") == true)
             {
                 switch (textBox17.Text)
@@ -121,8 +157,14 @@ namespace WindowsFormsApp1
                         break;
                 }
             }
+            if (checkedListBox2.CheckedItems.Contains("XCHG") == true)
+            {
 
+            }
+            if (checkedListBox2.CheckedItems.Contains("ADD") == true)
+            {
 
+            }
         }
 
 
@@ -166,13 +208,14 @@ namespace WindowsFormsApp1
             //y.Text = temp;
 
 
-            
+
 
 
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+
 
             ////textBox17 = "a";
             ////textBox18 = "b";
@@ -185,6 +228,41 @@ namespace WindowsFormsApp1
             //result2 = this.GetType().GetField("b").GetValue("b");
 
             //Mov(result1, result2);
+        }
+
+        private void checkedListBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox14_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox15_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox16_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 
